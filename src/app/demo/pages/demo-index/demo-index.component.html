@@ -1,0 +1,55 @@
+<div nz-row>
+  <div nz-col
+       nzSpan="6">
+
+    <nz-select [(ngModel)]="selectedCountry"
+               style="width: 100%;"
+               nzAllowClear
+               [nzServerSearch]="true"
+               [nzSize]="'large'"
+               nzShowSearch="true"
+               nzPlaceHolder="Страна"
+               (ngModelChange)="onCountryChange($event)"
+               (nzOnSearch)="onSearchCountry($event)"
+               (nzScrollToBottom)="onLoadMoreCountries()">
+      <ng-container *ngFor="let item of countries.items">
+        <nz-option [nzValue]="item"
+                   [nzLabel]="item.name"></nz-option>
+      </ng-container>
+
+    </nz-select>
+  </div>
+  <div nz-col
+       nzSpan="18">
+
+    <nz-table #citiesDataTable
+              nzShowPagination
+              nzShowSizeChanger
+              nzShowQuickJumper
+              nzHideOnSinglePage
+              nzShowTotal
+              [nzData]="cities.items"
+              [nzFrontPagination]="false"
+              [nzTotal]="cities.total"
+              [nzPageSize]="pageSize"
+              [nzPageSizeOptions]="[pageSize, pageSize * 2, pageSize* 4, cities.total]"
+              (nzPageIndexChange)="gridIndexChange($event)">
+      <thead>
+        <tr>
+          <th>Наименование</th>
+          <th>Регион</th>
+          <th>Страна</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let city of cities.items">
+          <td>{{city.name}}</td>
+          <td>{{city.regionName}}</td>
+          <td>{{city.countryName}}</td>
+        </tr>
+      </tbody>
+    </nz-table>
+
+  </div>
+
+</div>
