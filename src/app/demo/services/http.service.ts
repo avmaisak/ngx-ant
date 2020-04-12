@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
 import { HttpClient, HttpParams } from '@angular/common/http';
 import { IFilter } from '../interfaces/filter.interface';
-import { IPaginatedList } from '../interfaces/paginaled-list.interface';
+import { IPaginatedList } from '../interfaces/paginated-list.interface';
 @Injectable({
   providedIn: 'root'
 })
