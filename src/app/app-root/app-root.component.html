@@ -1,1 +1,13 @@
-<p>app-root works!</p>
+
+<ul nz-menu
+    nzMode="horizontal">
+  <li nz-menu-item
+      [routerLink]="['/demo']"
+      nzSelected>
+    <i nz-icon
+       nzType="folder-open"></i>
+    Demo
+  </li>
+</ul>
+
+<router-outlet></router-outlet>
