@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { IFilter } from '../../interfaces/filter.interface';
-import { IPaginatedList } from '../../interfaces/paginaled-list.interface';
+import { IPaginatedList } from '../../interfaces/paginated-list.interface';
 import { Item } from '../../interfaces/item.interface';
 import { HttpService } from '../../services/http.service';
 
