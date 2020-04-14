@@ -4,10 +4,10 @@ import { IPaginatedList } from '../../interfaces/paginated-list.interface';
 import { Item } from '../../interfaces/item.interface';
 import { HttpService } from '../../services/http.service';
 
+
 @Component({
   selector: 'app-demo-index',
-  templateUrl: './demo-index.component.html',
-  styleUrls: ['./demo-index.component.less']
+  templateUrl: './demo-index.component.html'
 })
 export class DemoIndexComponent implements OnInit {
 
